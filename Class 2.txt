@@ -1,0 +1,80 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+class Unggas
+{
+    private :
+    char * warna_bulu;
+    int jumlah_kaki;
+    public :
+    void setjumlah_kaki(int jumlah_kaki)
+    {
+        this->jumlah_kaki=jumlah_kaki;
+    }
+    int getjumlah_kaki()
+    {
+        return this->jumlah_kaki;
+    }
+    void setwarna_bulu(char *warna_bulu)
+    {
+        this->warna_bulu=warna_bulu;
+    }
+    char * getwarna_bulu()
+    {
+        return this->warna_bulu;
+    }
+    void suara(char * suara)
+    {
+        cout<<suara;
+    }
+    void bisa_terbang(char * bisa_terbang)
+    {
+        cout<<bisa_terbang;
+    }
+};
+
+class Ayam:public Unggas
+{
+        
+};
+class Itik:public Unggas
+{
+        
+};
+class Burung:public Unggas
+{
+        
+};
+int main(int argc, char **argv)
+{
+    Ayam Ayam;
+    Ayam.setwarna_bulu("biru");
+    Ayam.setjumlah_kaki(2);
+    cout<<"Warna bulu ayam adalah = " <<Ayam.getwarna_bulu();
+    cout<<"\nJumlah kaki ayam adalah = " <<Ayam.getjumlah_kaki();
+    cout<<"\nSuara ayam = ";
+    Ayam.suara("kukkruyuk");
+    cout<<"\nApakah ayam bisa terbang??? ";
+    Ayam.bisa_terbang("ya");cout<<"\n\n";
+    Itik Itik;
+    Itik.setwarna_bulu("hitam");
+    Itik.setjumlah_kaki(2);
+    cout<<"Warna bulu itik adalah = " <<Itik.getwarna_bulu();
+    cout<<"\nJumlah kaki itik adalah = " <<Itik.getjumlah_kaki();
+    cout<<"\nSuara itik = ";
+    Itik.suara("hai!!! hai!!!");
+    cout<<"\nApakah itik bisa terbang??? ";
+    Itik.bisa_terbang("ya");cout<<"\n\n";
+    Burung Burung;
+    Burung.setwarna_bulu("merah");
+    Burung.setjumlah_kaki(2);
+    cout<<"Warna bulu burung adalah = " <<Burung.getwarna_bulu();
+    cout<<"\nJumlah kaki burung adalah = " <<Burung.getjumlah_kaki();
+    cout<<"\nSuara burung = ";
+    Burung.suara("keok!!!");
+    cout<<"\nApakah burung bisa terbang??? ";
+    Burung.bisa_terbang("ya");
+	cout<<"\n\n";
+		return 0;
+}
